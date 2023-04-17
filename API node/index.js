@@ -6,9 +6,10 @@ const cors = require('cors')
 app.use((req, res, next)=>{
     // permitindo que o endereço indicado pode acessar esta API
     //http://localhost:3000 é o endereço da aplicação REACT
-    res.header('Access-Control-Allow-Origin', 'http://localhost:3000')
+    res.header('Access-Control-Allow-Origin', '*')
     // permitindo que os seguintes métodos poderam serem usados pela aplicação externa
-    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE')
+    res.header('Access-Control-Allow-Methods', '*')
+    res.header('Access-Control-Allow-Headers', '*')
     // carregar o cors 
     app.use(cors())
     // continuar execução
